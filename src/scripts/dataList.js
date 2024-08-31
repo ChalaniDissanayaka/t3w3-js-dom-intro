@@ -75,6 +75,8 @@ function renderData() {
     carsContainerElement.appendChild(carsContainerList);
 }
 
+
+
 function removeCarFromDataList(targetItemToRemove) {
 
     // Remove the target item from the dataArray
@@ -84,5 +86,31 @@ function removeCarFromDataList(targetItemToRemove) {
     renderData();
 }
 
-// Initial render
-renderData();
+
+
+function addCarToDataList(event, targetInputId) {
+    // Find the form from the event
+    // Prevent the form from doing its default behaviour (refreshing the page)
+    event.preventDefault();
+    console.log("Add car to list function is now working!");
+
+    // Find the input text field based on targetInputId
+    let targetTextInput = document.getElementById(targetInputId);
+    // Grab the string value from the text field
+    console.log(targetTextInput.value);
+
+    // Push the string value into dataArray
+    dataArray.push(targetTextInput.value);
+
+    // Clear out the input field text to be blank again
+    targetTextInput.value = "";
+
+    // Focus on the text input field again to enable quick data entry!
+    targetTextInput.focus();
+
+    // Call renderData() to update the page
+    renderData();
+}
+
+let formInputButton = document.getElementById("formInputButton");
+formInputButton.addEventListener("click", (event) => addCarToDataList(event, "carInputText"));

@@ -9,6 +9,18 @@
   <body>
     <h1>Cars List</h1>
 
+    <form id="carsInputForm">
+      <label for="carNameInput"> Enter a car name: </label>
+      <input
+        type="text"
+        name="carNameInput"
+        id="carInputText"
+        placeholder="Enter New Car Name"
+        required
+      />
+      <input type="submit" />
+    </form>
+
     <section id="carsContainer"></section>
 
     <script src="./scripts/dataList.js"></script>

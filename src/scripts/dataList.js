@@ -56,7 +56,7 @@ function renderData() {
             removeButton.style.backgroundColor = "#478CCF";
         };
         removeButton.onmouseout = () => {
-            removeButton.style.backgroundColor = "#3DC2EC";
+            removeButton.style.backgroundColor = "#36C2CE";
         };
 
         removeButton.onclick = (() => removeCarFromDataList(car));
@@ -87,7 +87,6 @@ function removeCarFromDataList(targetItemToRemove) {
 }
 
 
-
 function addCarToDataList(event, targetInputId) {
 
     // Find the form element
@@ -100,7 +99,6 @@ function addCarToDataList(event, targetInputId) {
         formElement.reportValidity(); 
         return;
     } 
-
 
     // Find the form from the event
     // Prevent the form from doing its default behaviour (refreshing the page)

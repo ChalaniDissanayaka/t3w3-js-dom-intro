@@ -2,6 +2,7 @@ console.log("CSS Theme toggler loaded and running!");
 
 let rootElement = document.querySelector(":root");
 let themeToggleButton = document.getElementById("themeToggle");
+let randomThemeToggleButton = document.getElementById("randomThemeToggle");
 
 let themes = [
     {
@@ -9,7 +10,7 @@ let themes = [
         properties: {
             backgroundColour: "#4c565b",
             fontColour: "white",
-            "theme-100": "#4c565b"
+            "theme-100": "#27353d"
         }
     },
     {
@@ -21,6 +22,40 @@ let themes = [
         }
     }
 ];
+
+[themeToggleButton, randomThemeToggleButton].forEach(button => {
+    button.style.padding = "10px 20px";
+    button.style.margin = "15px 5px";
+    button.style.borderRadius = "5px";
+    button.style.border = "none";
+    button.style.backgroundColor = "#36C2CE";
+    button.style.color = "black";
+    button.style.cursor = "pointer";
+    
+});
+
+
+// Adjust hover effects
+themeToggleButton.onmouseover = () => {
+    themeToggleButton.style.backgroundColor = "#478CCF";
+};
+themeToggleButton.onmouseout = () => {
+    themeToggleButton.style.backgroundColor = "#36C2CE";
+};
+
+randomThemeToggleButton.onmouseover = () => {
+    randomThemeToggleButton.style.backgroundColor = "#478CCF";
+};
+randomThemeToggleButton.onmouseout = () => {
+    randomThemeToggleButton.style.backgroundColor = "#36C2CE";
+};
+
+// Event listener for random theme toggle
+randomThemeToggleButton.addEventListener("click", () => {
+    let randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    document.body.style.backgroundColor = randomColor;
+    document.body.style.color = "#ffffff"; // Ensuring text is visible on any background
+});
 
 // Read theme name stored in local storage
 // and update CSS variables based on that name
@@ -70,7 +105,7 @@ function updateButtonText() {
 
 
 function toggleTheme() {
-    // if ("dark" == "dark"){
+    // if ("dark" == "light"){
     // if ("light" == "dark"){
     if(getChosenTheme() == "dark"){
         // set it to light
@@ -82,8 +117,6 @@ function toggleTheme() {
 } 
 
 
-themeToggleButton.onclick = toggleTheme;
-// themeToggleButton.addEventListener("click", toggleTheme);
 
 // Loop through properties key in chosen theme object
 // and apply those properties to CSS
@@ -104,9 +137,15 @@ function updateCssVariables(){
 	// for (const cssProperty of matchingTheme.properties) {
 	// 	console.log(cssProperty);
 	// }
+    document.body.style.backgroundColor = matchingTheme.properties.backgroundColour;
+    document.body.style.color = matchingTheme.properties.fontColour;
 
 	updateButtonText();
 }
+
+// Attach the toggleTheme function to the themeToggle button
+themeToggleButton.onclick = toggleTheme;
+// themeToggleButton.addEventListener("click", toggleTheme);
 
 
 function getVariablesFromCSS(){

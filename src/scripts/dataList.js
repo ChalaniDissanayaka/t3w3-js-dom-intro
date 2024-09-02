@@ -89,6 +89,19 @@ function removeCarFromDataList(targetItemToRemove) {
 
 
 function addCarToDataList(event, targetInputId) {
+
+    // Find the form element
+    let formElement = document.getElementById("carsInputForm")
+    // Use the form element.checkValidity() method and save the result
+    let isFormValid = formElement.checkValidity();
+    console.log("isFormValid value: " + isFormValid)
+    // do a conditional based on that result value
+    if (!isFormValid) {
+        formElement.reportValidity(); 
+        return;
+    } 
+
+
     // Find the form from the event
     // Prevent the form from doing its default behaviour (refreshing the page)
     event.preventDefault();
@@ -107,6 +120,9 @@ function addCarToDataList(event, targetInputId) {
 
     // Focus on the text input field again to enable quick data entry!
     targetTextInput.focus();
+
+    // alert after submit
+    alert("Submitted a new entry: " + dataArray[dataArray.length - 1]);
 
     // Call renderData() to update the page
     renderData();

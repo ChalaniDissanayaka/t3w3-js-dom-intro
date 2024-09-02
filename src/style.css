@@ -1,0 +1,10 @@
+:root {
+    --backgroundColour: rgb(89, 87, 87);
+    --fontColour: white;
+}
+
+
+body {
+    background-color: var(--backgroundColour);
+    color: var(--fontColour)
+}

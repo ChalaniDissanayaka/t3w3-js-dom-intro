@@ -33,7 +33,7 @@ function renderData() {
         let newCarEntry = document.createElement("li");
 
         // Set larger font size for the list items
-        newCarEntry.style.fontSize = "25px";
+        newCarEntry.style.fontSize = "20px";
 
         // Add the data to the new element with a space after the car name
         newCarEntry.innerText = `${car} `;
@@ -45,8 +45,8 @@ function renderData() {
 
         // Set button styles
         removeButton.style.backgroundColor = "lightyellow"; // Light yellow or cream color
-        removeButton.style.fontSize = "16px";
-        removeButton.style.padding = "6px 30px";
+        removeButton.style.fontSize = "15px";
+        removeButton.style.padding = "5px 25px";
         removeButton.style.cursor = "pointer";
         removeButton.style.borderRadius = "5px";
         removeButton.style.marginLeft = "15px"; // Space between car name and button

@@ -44,7 +44,7 @@ function renderData() {
         removeButton.innerText = `Remove ${car}`;
 
         // Set button styles
-        removeButton.style.backgroundColor = "lightyellow"; // Light yellow or cream color
+        removeButton.style.backgroundColor = "#36C2CE"; // Light yellow or cream color
         removeButton.style.fontSize = "15px";
         removeButton.style.padding = "5px 25px";
         removeButton.style.cursor = "pointer";
@@ -53,10 +53,10 @@ function renderData() {
 
         // Add hover effect for button color change
         removeButton.onmouseover = () => {
-            removeButton.style.backgroundColor = "lightgreen";
+            removeButton.style.backgroundColor = "#478CCF";
         };
         removeButton.onmouseout = () => {
-            removeButton.style.backgroundColor = "lightyellow";
+            removeButton.style.backgroundColor = "#3DC2EC";
         };
 
         removeButton.onclick = (() => removeCarFromDataList(car));

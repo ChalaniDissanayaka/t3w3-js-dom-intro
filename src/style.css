@@ -1,6 +1,8 @@
 :root {
-    --backgroundColour: rgb(89, 87, 87);
+    --backgroundColour: #4c565b;
     --fontColour: white;
+
+    --theme-100: #402E7A;
 }
 
 

@@ -16,9 +16,9 @@ let themes = [
     {
         name: "light",
         properties: {
-            backgroundColour: "#a5b1b7",
-            fontColour: "black",
-            "theme-100": "#a5b1b7"
+            backgroundColour: "#423e90",
+            fontColour: "white",
+            "theme-100": "#423e90"
         }
     }
 ];
@@ -28,26 +28,25 @@ let themes = [
     button.style.margin = "15px 5px";
     button.style.borderRadius = "5px";
     button.style.border = "none";
-    button.style.backgroundColor = "#36C2CE";
+    button.style.backgroundColor = "#258b95";
     button.style.color = "black";
     button.style.cursor = "pointer";
-    
 });
 
 
 // Adjust hover effects
 themeToggleButton.onmouseover = () => {
-    themeToggleButton.style.backgroundColor = "#478CCF";
+    themeToggleButton.style.backgroundColor = "#36C2CE";
 };
 themeToggleButton.onmouseout = () => {
-    themeToggleButton.style.backgroundColor = "#36C2CE";
+    themeToggleButton.style.backgroundColor = "#258b95";
 };
 
 randomThemeToggleButton.onmouseover = () => {
-    randomThemeToggleButton.style.backgroundColor = "#478CCF";
+    randomThemeToggleButton.style.backgroundColor = "#36C2CE";
 };
 randomThemeToggleButton.onmouseout = () => {
-    randomThemeToggleButton.style.backgroundColor = "#36C2CE";
+    randomThemeToggleButton.style.backgroundColor = "#258b95";
 };
 
 // Event listener for random theme toggle

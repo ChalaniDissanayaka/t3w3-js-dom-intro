@@ -1,4 +1,6 @@
-# App Description:
+# dynamic car list manager / theme toggler App Description:
+
+## Description:
 
 This app is a dynamic car list manager combined with a theme toggler, allowing users to interactively manage a collection of cars and switch between different visual themes. Users can add or remove cars from the list, and the interface adapts visually through light, dark, or random color themes.
 
